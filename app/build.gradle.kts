@@ -18,6 +18,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        compose = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -61,4 +65,12 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core:1.6.0")
     implementation("androidx.compose.material:material-icons-extended:1.6.0")
     implementation("androidx.navigation:navigation-compose:2.7.5")
+    // For Glance support
+    implementation("androidx.glance:glance:1.1.1")
+
+    // For AppWidgets support
+    implementation("androidx.glance:glance-appwidget:1.1.1")
+
+    // For interop APIs with Material 3
+    implementation("androidx.glance:glance-material3:1.1.0")
 }
